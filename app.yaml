@@ -1,0 +1,33 @@
+service: web-share-target-gallery
+runtime: python27
+api_version: 1
+threadsafe: true
+
+# [START handlers]
+handlers:
+
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /manifest.webmanifest
+  static_files: manifest.webmanifest
+  upload: manifest.webmanifest
+
+- url: /sw.js
+  static_files: sw.js
+  upload: sw.js
+
+# [END handlers]
+
+# [START libraries]
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+# [END libraries]
