@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Web Share Target Gallery</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+</head>
+<body>
+  <script>
+    'use strict';
+    navigator.serviceWorker.register("/sw.js").then(registration => {
+    }, err => {
+      console.error("Installing the service worker failed!", err);
+    });
+  </script>
+</body>
+</html>
